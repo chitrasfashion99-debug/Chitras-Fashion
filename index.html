@@ -1,23 +1,52 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>Chitra’s Fashion</title>
+
+  <!-- LINK TO CSS FILE -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <h1>Welcome to Chitra’s Fashion</h1>
-  <p>Stylish Kurtis | Easy WhatsApp Ordering</p>
+  <!-- HEADER -->
+  <header>
+    <h1>Chitra’s Fashion</h1>
+    <p>Elegant Kurtis • Easy WhatsApp Ordering</p>
+  </header>
 
-  <div class="product">
-    <h3>Floral Kurti</h3>
-    <p>₹999</p>
-    <button onclick="addToCart('Floral Kurti', 999)">Add to Cart</button>
+  <!-- PRODUCTS SECTION -->
+  <section class="products">
+
+    <div class="product">
+      <h3>Floral Kurti</h3>
+      <p class="price">₹999</p>
+      <button onclick="addToCart('Floral Kurti', 999)">
+        Add to Cart
+      </button>
+    </div>
+
+    <div class="product">
+      <h3>Cotton Kurti</h3>
+      <p class="price">₹899</p>
+      <button onclick="addToCart('Cotton Kurti', 899)">
+        Add to Cart
+      </button>
+    </div>
+
+  </section>
+
+  <!-- CHECKOUT -->
+  <div class="checkout">
+    <button onclick="checkoutWhatsApp()">
+      Checkout on WhatsApp
+    </button>
   </div>
 
-  <br>
-  <button onclick="checkout()">Checkout on WhatsApp</button>
-
+  <!-- LINK TO JS FILE -->
   <script src="script.js"></script>
+
 </body>
 </html>
+
+
