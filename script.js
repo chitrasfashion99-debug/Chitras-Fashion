@@ -1,28 +1,30 @@
-let cart = [];
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 function addToCart(name, price) {
   cart.push({ name, price });
+  localStorage.setItem("cart", JSON.stringify(cart));
   alert(name + " added to cart");
 }
 
-function checkout() {
+function checkoutWhatsApp() {
   if (cart.length === 0) {
-    alert("Cart is empty");
+    alert("Your cart is empty");
     return;
   }
 
-  let message = "Hi, I want to order:%0A";
+  let message = "Hi, I want to order:%0A%0A";
   let total = 0;
 
-  cart.forEach((item, i) => {
-    message += `${i + 1}. ${item.name} - ₹${item.price}%0A`;
+  cart.forEach((item, index) => {
+    message += (index + 1) + ". " + item.name + " - ₹" + item.price + "%0A";
     total += item.price;
   });
 
-  message += `%0ATotal: ₹${total}%0AFrom Chitra’s Fashion`;
+  message += "%0ATotal: ₹" + total + "%0AFrom Chitra’s Fashion";
 
-  window.open(
-    "https://wa.me/919307624841?text=" + message,
-    "_blank"
-  );
+  // 🔴 REPLACE WITH YOUR NUMBER (NO +, NO SPACES)
+  let phoneNumber = "91XXXXXXXXXX";
+
+  window.open("https://wa.me/" + phoneNumber + "?text=" + message, "_blank");
 }
+
