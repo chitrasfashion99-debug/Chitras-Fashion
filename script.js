@@ -23,8 +23,9 @@ function checkoutWhatsApp() {
   message += "%0ATotal: ₹" + total + "%0AFrom Chitra’s Fashion";
 
   // 🔴 REPLACE WITH YOUR NUMBER (NO +, NO SPACES)
-  let phoneNumber = "91XXXXXXXXXX";
+  let phoneNumber = "919307624841";
 
   window.open("https://wa.me/" + phoneNumber + "?text=" + message, "_blank");
 }
+
 
