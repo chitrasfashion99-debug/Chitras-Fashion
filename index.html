@@ -1,39 +1,52 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Chitra’s Fashion</title>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  text-align: center;
+}
 
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+header {
+  background: #111;
+  color: white;
+  padding: 20px;
+}
 
-  <header>
-    <h1>Chitra’s Fashion</h1>
-    <p>Elegant Kurtis • Easy WhatsApp Ordering</p>
-  </header>
+.products {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 30px;
+  flex-wrap: wrap;
+}
 
-  <section class="products">
+.product {
+  background: white;
+  padding: 20px;
+  width: 250px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
 
-    <div class="product">
-      <h3>Floral Kurti</h3>
-      <p class="price">₹999</p>
-      <button onclick="addToCart('Floral Kurti', 999)">Add to Cart</button>
-    </div>
+.price {
+  font-size: 18px;
+  font-weight: bold;
+}
 
-    <div class="product">
-      <h3>Cotton Kurti</h3>
-      <p class="price">₹899</p>
-      <button onclick="addToCart('Cotton Kurti', 899)">Add to Cart</button>
-    </div>
+button {
+  background: #25d366;
+  border: none;
+  padding: 10px 15px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
 
-  </section>
+button:hover {
+  opacity: 0.9;
+}
 
-  <div class="checkout">
-    <button onclick="checkoutWhatsApp()">Checkout on WhatsApp</button>
-  </div>
+.checkout {
+  margin-bottom: 40px;
+}
 
-  <script src="script.js"></script>
-
-</body>
-</html>
